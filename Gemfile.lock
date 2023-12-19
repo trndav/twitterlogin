@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/ffi/ffi.git
+  revision: a898d7c3ab12e77e3db8fff445f23cb48a954251
+  submodules: true
+  specs:
+    ffi (1.16.3)
+
+GIT
   remote: https://github.com/rails/rails.git
   revision: 462e8e8b1c74d46a78e7077c5b07bfbc6fab08b0
   branch: main
@@ -117,6 +124,7 @@ GEM
     debug (1.9.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    domain_name (0.6.20231109)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -128,6 +136,9 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
+    http-accept (1.7.0)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.1)
@@ -149,6 +160,9 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2023.1205)
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
@@ -162,6 +176,7 @@ GEM
       timeout
     net-smtp (0.4.0)
       net-protocol
+    netrc (0.11.0)
     nio4r (2.7.0)
     nokogiri (1.15.5-x64-mingw-ucrt)
       racc (~> 1.4)
@@ -216,6 +231,11 @@ GEM
       psych (>= 4.0.0)
     reline (0.4.1)
       io-console (~> 0.5)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     ruby2_keywords (0.0.5)
     snaky_hash (2.0.1)
       hashie
@@ -260,14 +280,17 @@ DEPENDENCIES
   bootsnap
   cssbundling-rails
   debug
+  ffi!
   jbuilder
   jsbundling-rails
+  mime-types (~> 3.3.1)
   omniauth (~> 2.1)
   omniauth-rails_csrf_protection (~> 1.0)
   omniauth-twitter2 (~> 0.1.0)
   pg (~> 1.1)
   puma (>= 5.0)
   rails!
+  rest-client (~> 2.1)
   sprockets-rails
   stimulus-rails
   turbo-rails
